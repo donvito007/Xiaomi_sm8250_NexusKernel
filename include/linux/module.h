@@ -29,6 +29,12 @@
 #include <linux/percpu.h>
 #include <asm/module.h>
 
+#include <stdbool.h>
+
+struct module;
+
+void module_assert_mutex(void);
+
 /* In stripped ARM and x86-64 modules, ~ is surprisingly rare. */
 #define MODULE_SIG_STRING "~Module signature appended~\n"
 
